@@ -1,0 +1,243 @@
+@charset "utf-8";
+/* CSS Document */
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Regular.woff2') format('woff2'),
+        url('../font/Montserrat-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-semibold';
+    src: url('../font/Montserrat-SemiBold.woff2') format('woff2'),
+        url('../font/Montserrat-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+body{ /*Aquí va la imagen que estará en el fondo de todo el Polilibro*/
+    background: url("../imas/common/background.png") ;
+    background-size:  100% 100%;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+
+}
+#inicio{ /*Bloque para el encabezado institucional*/
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 26px;
+    color: #154b60;
+}
+
+
+p{ /*Cualquier párrafo de este Polilibro debe regirse bajo los siguentes ajustes*/
+    text-align: justify;
+    font-size: 19px;
+}
+
+#botones_menu{ /*El encabezado de este Polilibro contiene un menú de navegación que debe seguir estos ajustes*/
+    margin-top: -80px;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    z-index: 10;
+}
+
+@media only screen and (max-width: 1450px) {
+ #botones_menu{
+    margin-top: -50px;
+     font-size: 15px;
+}
+}
+
+
+.bot{
+    padding-top: 20px;
+}
+
+.card-header{ /*Los colapsadores ubicados en el index de este Polilibro deben seguir los siguientes ajustes*/
+    background: url("pleca.png");
+    background-size: auto 100%;
+    background-position: right;
+    background-color: #031926;
+    background-repeat: no-repeat;
+    height: 50px;
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.pleca-temas{ /*La pleca de los temas deben regirse bajo estos ajustes, incluye responsividad para tabletas y dispositivos móviles*/
+    background: url("../imas/inicio/Pleca_contenidos.jpg");
+    background-size: auto 100%;
+    background-position: right;
+    background-color: #031926;
+    background-repeat: no-repeat;
+    height: auto;
+    color: white;
+    font-weight: bold;
+    white-space: normal;
+    word-wrap: break-word;
+    font-size: clamp(20px, 2vw, 25px);
+    padding: 12px;
+}
+
+.bot-acor{
+     position: absolute; 
+    width: 100%; 
+    height: 50px; 
+    top: 0px; 
+    left: 0px;
+}
+.iconito1{
+    position: absolute; 
+    left: 0px; 
+    top: 0px;
+}
+.iconito2{
+    position: absolute; 
+    right: 0px; 
+    top: 0px;
+}
+
+h3{ /*Los títulos que lleven esta etiqueta deben seguir estos ajustes*/
+    color:#154b60;
+    margin-top: 32px;
+}
+
+h4{ /*Los títulos que lleven esta etiqueta deben seguir estos ajustes*/
+    color:#154b60;
+    margin-top: 32px;
+}
+
+ol li::marker, ul li::marker {
+    color: #031926;
+    font-weight: bold;
+}
+
+ol li, ul li{ /*El contenido de las listas de este Polilibro debe seguir los mismos ajustes de los párrafos*/
+    font-size: 19px;
+}
+
+a:link, a:visited, a:active {
+    text-decoration:none;
+}
+
+.bot-menu{
+    color: white
+        
+}
+
+.bot-menu:hover{
+    color:#ffbc36;
+}
+
+.titulin{ /*Los títulos que lleven esta clase deben seguir estos ajustes*/
+    color:#031926;
+    font-size: 21px;
+    margin-top: 30px;
+}
+
+#pleca_botones{ /*Son los ajustes de estilo para los botones de "Práctica" "Ejemplo de solución" y "Documentación del proyecto"*/
+    width: 100%;
+    padding: 10px;
+    background: linear-gradient(to right, rgb(21,75,96), rgb(62,127,136));
+    position: fixed;
+    bottom:0px;
+}
+
+.tx-figura{ /*Son los ajustes que deben tener los textos debajo de las figuras del Polilibro*/
+    text-align: center;
+    color:#031926;
+    margin-top: 10px;
+}
+
+.actividad{ /*Corresponde a los ajustes de estilo para las actividades de reflexión de este Polilibro*/
+    background: #9dbebb;
+    border: dotted 2px #031926;
+    color: #031926;
+    width: 100%;
+    max-width: 800px;
+    padding:20px;
+    margin-top: 50px;
+}
+
+hr{ 
+     border: 1px solid #031926;
+}
+
+.indice {
+    background: #9dbebb;
+    padding: 20px;
+    color: #031926;
+}
+
+.sangria-francesa {
+    list-style: none;
+    padding-left: 20px; /* Ajusta el espacio del margen izquierdo  */
+    text-indent: -20px; /* Crea la sangria francesa*/
+}
+
+.glosario { /*El glosario de este Polilibro debe estar en forma de lista y el estilo de dicha lista debe regirse bajo el sigiente ajuste*/
+    list-style: none;
+}
+
+.imagen-contenido{ /*Las imágenes de este Polilibro deben tener las siguientes dimensiones*/
+	width: 800px;
+	height: 500px;
+}
+
+.imagen-contenido-vert{ /*En caso de que tus imagenes sean verticales deben regirse bajo estas dimensiones*/
+	width: 700px;
+	height: 800px;
+}
+
+.contenedor {
+  max-width: 100%;
+  padding: 1rem;
+}
+
+.imagen-responsiva { /*Esto hará que las preguntas detonadoras de cada unidad sigan los siguentes ajustes*/
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  display: block;
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+@media (max-width: 768px){ /*Cuando se visualicen las imágenes en dispositivos móviles deben seguir los siguientes ajustes*/
+	.imagen-responsiva-movil {
+  		max-width: 100%;
+  		width: auto;
+  		height: auto;
+  		display: block;
+  		margin: 0 auto; /* Centrado horizontal */
+	}
+}
+
+.tabla-container {/* Contenedor de la tabla: permite que la tabla se haga scroll horizontal en pantallas pequeñas */
+    width: 100%;
+    overflow: auto;
+}
+
+table{/* Los ajustes que tendrían todas las tablas que se quieran incluir en el contenido*/
+    border-collapse:  collapse;
+    width: 90%;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+th, td {/* Estilos para todas las celdas (encabezados y datos) */
+    background-color: rgba(244, 233, 205, 0.5);
+    border: 3px solid #062B3D;
+    padding: 8px;
+    text-align: center
+}
+
+th{/* Estilos específicos para los encabezados de la tabla */
+    background-color: rgba(229, 219, 204, 0.7);
+    color: #154b60;
+}
