@@ -62,7 +62,7 @@ p{ /*Cualquier párrafo de este Polilibro debe regirse bajo los siguentes ajuste
     background: url("pleca.png");
     background-size: auto 100%;
     background-position: right;
-    background-color: #031926;
+    background-color: #012840;
     background-repeat: no-repeat;
     height: 50px;
     color: white;
@@ -74,7 +74,7 @@ p{ /*Cualquier párrafo de este Polilibro debe regirse bajo los siguentes ajuste
     background: url("../imas/inicio/Pleca_contenidos.jpg");
     background-size: auto 100%;
     background-position: right;
-    background-color: #031926;
+    background-color: #012840;
     background-repeat: no-repeat;
     height: auto;
     color: white;
@@ -109,7 +109,7 @@ h3{ /*Los títulos que lleven esta etiqueta deben seguir estos ajustes*/
 }
 
 h4{ /*Los títulos que lleven esta etiqueta deben seguir estos ajustes*/
-    color:#154b60;
+    color:#012840;
     margin-top: 32px;
 }
 
