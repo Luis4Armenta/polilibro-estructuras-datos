@@ -4,17 +4,24 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <title>Polilibro - Estructuras de datos</title>
-  <link rel="stylesheet" href="css/all.css"
-    integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <meta name="description" content="Unidad 1 - Estructuras de Datos">
+  <title>Polilibro - Estructuras de datos | Unidad 1</title>
+
+  <link rel="stylesheet" href="css/all.css" crossorigin="anonymous">
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/estilo.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+
   <style>
-    /* navbar taller para logos grandes */
+    /* Ajustes minimalistas para el Navbar y el Body */
+    body {
+      padding-top: 130px;
+      padding-bottom: 100px;
+      /* Evita que el contenido quede oculto tras el footer flotante */
+    }
+
     .navbar {
       min-height: 120px;
     }
@@ -25,29 +32,17 @@
       width: auto;
     }
 
-    @media (max-width: 576px) {
-      .navbar .d-flex img {
-        max-height: 60px;
-      }
-
-      .navbar {
-        min-height: 80px;
-      }
-
-      body {
-        padding-top: 90px;
-      }
-    }
-
-    body {
-      padding-top: 130px;
-    }
-
     .navbar .nav-link,
     .navbar .navbar-brand {
       font-size: 1.25rem;
     }
 
+    .navbar-nav .nav-link.active {
+      color: #025373 !important;
+      font-weight: 600;
+    }
+
+    /* Footer flotante minimalista */
     .footer-buttons {
       position: fixed;
       bottom: 0;
@@ -60,6 +55,10 @@
       justify-content: center;
       gap: 20px;
       z-index: 100;
+    }
+
+    .footer-buttons a {
+      text-decoration: none;
     }
 
     .footer-buttons button {
@@ -75,294 +74,304 @@
       flex-direction: row;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 0 10px rgba(5, 242, 242, 0.6);
-    }
-
-    .footer-buttons .material-symbols-outlined {
-      flex-shrink: 0;
-      min-width: 24px;
-    }
-
-    .footer-buttons .button-text {
-      max-width: 70px;
-      font-size: 0.85rem;
-      line-height: 1.2;
-      word-break: keep-all;
     }
 
     .footer-buttons button:hover {
-      box-shadow: 0 0 20px rgba(5, 242, 242, 1);
-      border-color: #012840;
+      box-shadow: 0 0 15px rgba(5, 242, 242, 0.8);
+      border-color: #05f2f2;
+      color: #05f2f2;
     }
 
-    .navbar-nav .nav-link.active {
-      color: #025373 !important;
+    /* Responsividad del Navbar */
+    @media (max-width: 576px) {
+      .navbar .d-flex img {
+        max-height: 60px;
+      }
+
+      .navbar {
+        min-height: 80px;
+      }
+
+      body {
+        padding-top: 90px;
+      }
+
+      .footer-buttons button {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+      }
     }
   </style>
 </head>
 
 <body style="position: relative;">
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top shadow-sm">
     <div class="container-fluid">
       <a class="navbar-brand d-flex align-items-center" href="index.html">
         <div class="d-flex flex-column text-center">
           <span>IPN</span>
-          <span>UPIICSA</span>
+          <span style="font-size: 0.9rem;">UPIICSA</span>
         </div>
-        <span class="vr mx-2"></span>
+        <span class="vr mx-3"></span>
         <span>Estructuras de datos</span>
       </a>
+
       <button class="navbar-toggler order-3 order-lg-2" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+
       <div class="d-flex align-items-center ms-auto me-3 order-2 order-lg-3">
-        <img src="imas/common/logo_ipn.png" alt="Logo 1" class="me-2">
-        <img src="imas/common/logo_upiicsa.png" alt="Logo 2">
+        <img src="imas/common/logo_ipn.png" alt="Logo IPN" class="me-2">
+        <img src="imas/common/logo_upiicsa.png" alt="Logo UPIICSA">
       </div>
+
       <div class="collapse navbar-collapse order-lg-2" id="navbarText">
         <ul class="navbar-nav mx-auto justify-content-center mb-2 mb-lg-0 w-100">
-          <li id="espacio"></li>
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="unidad1.html">Unidad I</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="unidad2.html">Unidad II</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="unidad3.html">Unidad III</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="referencias.html">Lista de referencias</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="glosario.html">Glosario</a>
-          </li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="unidad1.html">Unidad I</a></li>
+          <li class="nav-item"><a class="nav-link" href="unidad2.html">Unidad II</a></li>
+          <li class="nav-item"><a class="nav-link" href="unidad3.html">Unidad III</a></li>
+          <li class="nav-item"><a class="nav-link" href="unidad4.html">Unidad IV</a></li>
+          <li class="nav-item"><a class="nav-link" href="referencias.html">Referencias</a></li>
+          <li class="nav-item"><a class="nav-link" href="glosario.html">Glosario</a></li>
         </ul>
       </div>
+    </div>
   </nav>
 
-  <br><br><br>
-  <div class="container">
+  <main class="container mt-4">
 
-    <center><img src="imas/u1/portada.png" class="img-fluid" alt="Unidad Temática I: Representación de datos"></center>
-    <br>
-
-    <h3>Unidad de competencia</h3>
-    <p>Emplea tipos y estructuras de datos en la memoria de una computadora a partir de su clasificación y
-      propósito, así como un lenguaje de programación. </p>
-    <br>
-
-    <div class="indice col-12 col-lg-8 mx-auto">
-      <p>Los siguientes temas se tratan en esta unidad: </p>
-      <p><b>1.1 Medios de almacenamiento y organización de la memoria en una computadora </b><br>
-        <b>1.2 Organización de los datos en la memoria física y lógica </b><br>
-        1.2.1 Clasificación de datos simples y compuestos <br>
-        1.2.2 Operaciones permitidas con los datos <br>
-        <b>1.3 Representación de las estructuras de datos </b><br>
-        1.3.1 Operaciones básicas sobre las estructuras de datos <br>
-      </p>
+    <div class="text-center mb-5">
+      <img src="imas/u1/portada.png" class="img-fluid rounded shadow-sm"
+        alt="Unidad Temática I: Representación de datos">
     </div>
 
-    <br><br>
+    <section class="mb-5 text-center">
+      <h3 class="text-primary mb-3">Unidad de competencia</h3>
+      <p class="col-lg-8 mx-auto">Emplea tipos y estructuras de datos en la memoria de una
+        computadora a partir de su clasificación y propósito, así como un lenguaje de programación.</p>
+    </section>
 
-    <div class="pleca-temas">1.1 Medios de almacenamiento y organización de la memoria en una computadora</div>
-    <br>
-    <!-- <div class="contenedor">
-      <img src="imas/u1/1_1_banner.png" class="imagen-responsiva" alt="¿Sabes cómo se almacena la información?">
-    </div> -->
-    <br>
-    <p class="h3 text-center">¿Sabes cómo se almacena la información? </p>
-    <div class="contenedor">
-      <img src="imas/u1/u1_1.png" class="imagen-responsiva" alt="Funcionamiento de un computador">
-      <img src="imas/u1/u1_2.png" class="imagen-responsiva" alt="Tipos de memoria en un computador">
-    </div>
-    <div class="pleca-temas">1.2 Organización de los datos en la memoria física y lógica</div>
-    <br>
-    <div class="contenedor">
-      <img src="imas/u1/u1_3.png" class="imagen-responsiva" alt="Organización de los datos">
-    </div>
-    <div class="row">
-      <div class="col-6">
-        <p>La memoria (RAM) esta físicamente formada por bits, componentes que pueden estar en uno de dos
-          estados claramente definidos, encendido/apagado 0’s y 1’s. Como se observa un bit puede
-          representar dos valores, combinando grupos de bits se pueden representar más estados.
-          La memoria física RAM está compuesta por casillas de memoria en las cuales se pueden almacenar datos
-          que están organizados por direcciones de memoria. Cada celda en una dirección puede ser
-          de 8, 16, 32 o 64 bits. </p>
-
-      </div>
-      <div class="col-6">
-        <img src="imas/u1/u1_5.png" class="imagen-responsiva" alt="Prtes de la memoria RAM">
-      </div>
-    </div>
-
-    <div class="actividad container">
-      <h4>Ejercicio</h4>
-      <hr>
-      <p>Realizar el siguiente ejercicio: </p>
-      <ol>
-        <li>Para almacenar el sexo de una persona ¿cuántos bits se requieren? </li>
-        <li>Cuántos bits se requieren para almacenar los siete días de la semana? </li>
-        <li>Cuántos bits se requieren para almacenar los meses del año? </li>
-        <li>Para almacenar el código ASCII ¿cuántos bits se requieren? </li>
-      </ol>
-    </div>
-
-    <h4>1.2.1 Clasificación de datos simples y compuestos</h4>
-    <p>De acuerdo con la forma en que los datos se organizan, se clasifican en: </p>
-    <p>a) Tipos de datos simples <br>
-      b) Tipos de datos compuestos o estructurados </p>
-    </br>
-    <p>a) Un tipo de dato simple (primitivo) es aquel que hace referencia a un único valor a la vez y que
-      ocupan solo una casilla de memoria, por tanto, una variable simple hace referencia a un único valor a la vez.
-    </p>
-    <p>En este grupo se encuentran: </p>
-    <ul>
-      <li>Enteros (int): números sin decimales, como 10, -3 o 2025 </li>
-      <li>Flotantes (float o double): números con punto decimal, como 3.14 o -0.25 </li>
-      <li>Caracter (char): un solo símbolo, como ‘a’, ‘9’ o ‘$’ </li>
-      <li>Booleanos (bool): representan valores lógicos: verdadero (true) o falso (false).
-      </li>
-    </ul>
-
-    <p><b>Direccionamiento de la memoria</b> <br>
-      La unidad de control se dirige a los distintos bytes de memoria por su posición.
-      Todos los lenguajes de programación permiten dar un nombre a las posiciones de memoria y se conocen
-      como variables. Entonces una variable son las posiciones de memorias asociadas a un
-      nombre, por ejemplo: Area, Base y Altura. Las variables pueden cambiar su contenido o
-      pueden contener un valor constante, como es el caso del valor pi. </p>
-
-    <p>Usando un lenguaje de programación, por ejemplo, c++, se declaran las variables asignando un valor a
-      las variables Base y Altura.</p>
-
-    <pre>
-      <code class="language-cpp">
-        int Base = 3;
-        int Altura = 2; 
-        int Area;
-      </code>
-    </pre>
-
-    <div class="row">
-      <div class="col">
-        <p>Automáticamente la unidad de control asigna a las casillas
-          de memoria con sus direcciones a esas variables. Al momento de declarar las variables
-          de tipo de dato entero esas casillas nada más van a permitir datos enteros, en el caso del ejemplo al momento
-          de
-          declararlas se les ASIGNÓ un valor de tipo de dato entero a las variables Base=3 y Altura=2. </p>
-
-      </div>
-      <div class="col">
-        <img src="imas/u1/u1_6.png" class="imagen-responsiva" alt="Base, Altura y Area en la memoria RAM">
-
-      </div>
-    </div>
-
-    <div class="actividad container">
-      <h4>ACTIVIDAD A1</h4>
-      <hr>
-      <p><b>Propósito:</b> Utilizar un lenguaje de programación para declarar las variables que son las
-        posiciones de memoria y que tienen un nombre, para este caso, son Base, Altura y Area definiéndolas con el tipo
-        de dato simple que son los enteros. </p>
-      <p>La intención de esta actividad es que comprendan como declarar variables con su respectivo tipo de
-        dato para reservar un espacio de memoria y también como asignarle valores, además de entender la entrada y
-        salida de datos. </p>
-      <p><b>Instrucciones:</b> </p>
-      <ol>
-        <li>Declara las variables Base y Altura de tipo entero asignándoles los valores 3 y 2 respectivamente.
-          También declara la variable Area del mismo tipo. </li>
-        <li>Obtén el área con los valores de las variables base y altura. </li>
-        <li>Manda a imprimir el resultado con el siguiente mensaje: “El valor del área del triángulo es: “
+    <div class="indice col-12 col-lg-8 mx-auto p-4 mb-5 shadow-sm rounded">
+      <p class="mb-3 fw-bold">Los siguientes temas se tratan en esta unidad:</p>
+      <ul class="list-unstyled lh-lg mb-0 no-bullets">
+        <li><strong>1.1 Medios de almacenamiento y organización de la memoria en una computadora</strong></li>
+        <li><strong>1.2 Organización de los datos en la memoria física y lógica</strong>
+          <ul class="ms-4 list-unstyled">
+            <li>1.2.1 Clasificación de datos simples y compuestos</li>
+            <li>1.2.2 Operaciones permitidas con los datos</li>
+          </ul>
         </li>
-      </ol>
-      <p><b>Evidencia que entregar:</b> </p>
-      <ul>
-        <li>Programa fuente, el nombre de este programa debe de contener las iniciales de su nombre y el
-          nombre del programa, por ejemplo, RBV_Programa_Variable </li>
-        <li>Programa executable </li>
-        <li>Corrida del programa, en un archivo PDF </li>
-        <li>Subir esta evidencia a class room en la hora y fecha indicada </li>
+        <li><strong>1.3 Representación de las estructuras de datos</strong>
+          <ul class="ms-4 list-unstyled">
+            <li>1.3.1 Operaciones básicas sobre las estructuras de datos</li>
+          </ul>
+        </li>
       </ul>
-      <p>El valor de la actividad es de 10 puntos. </p>
     </div>
 
-    <p>b) Los tipos de datos compuestos o estructurados (estructura de datos) se caracterizan por el hecho
-      de que, con un nombre, se hace referencia a un grupo de casillas. Es decir, que tiene varios
-      componentes, que son de un tipo de dato simple. Por ejemplo: Arreglos (arrays): colecciones ordenadas
-      de elementos del mismo tipo. </p>
-    <img src="imas/u1/u1_7.png" class="imagen-responsiva" alt="Representación de un arreglo en la memoria RAM">
-    <img src="imas/u1/u1_8.png" class="imagen-responsiva"
-      alt="Representación de datos simples y estructurados en la memoria RAM">
+    <div class="pleca-temas mb-4 rounded shadow-sm">1.1 Medios de almacenamiento y organización de la memoria en una
+      computadora</div>
 
+    <h4 class="text-center mb-4 mt-5">¿Sabes cómo se almacena la información?</h4>
+    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4 mb-5">
+      <img src="imas/u1/u1_1.png" class="img-fluid rounded shadow-sm" alt="Funcionamiento de un computador"
+        style="max-width: 100%; height: auto;">
+      <img src="imas/u1/u1_2.png" class="img-fluid rounded shadow-sm" alt="Tipos de memoria en un computador"
+        style="max-width: 100%; height: auto;">
+    </div>
 
+    <div class="pleca-temas mb-4 rounded shadow-sm">1.2 Organización de los datos en la memoria física y lógica</div>
 
-    <div class="pleca-temas">1.3 Representación de las estructuras de datos</div>
-    <br>
-    <p>Las estructuras de datos son fundamentales para las principales actividades para llegar al desarrollo
-      de grandes sistemas de software. Las estructuras de datos permiten organizar,
-      almacenar y manipular datos en la memoria de una computadora. </p>
-    <br>
-    <img src="imas/u1/u1_n.png" class="imagen-responsiva" alt="Clsificación de las estructuras de datos">
+    <div class="text-center mb-5 mt-4">
+      <img src="imas/u1/u1_3.png" class="img-fluid rounded shadow-sm" alt="Organización de los datos"
+        style="max-width: 800px; width: 100%;">
+    </div>
 
+    <div class="row align-items-center mb-5">
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-justify">
+        <p>La memoria RAM está físicamente formada por bits, componentes que pueden estar en uno de dos estados
+          claramente definidos: encendido o apagado (ceros y unos). Como se observa, un bit puede representar dos
+          valores; combinando grupos de bits se pueden representar más estados.</p>
+        <p>La memoria física RAM está compuesta por casillas en las cuales se pueden almacenar datos organizados por
+          direcciones de memoria. Cada celda en una dirección puede ser de 8, 16, 32 o 64 bits.</p>
+      </div>
+      <div class="col-12 col-lg-6 text-center">
+        <img src="imas/u1/u1_5.png" class="img-fluid rounded shadow-sm" alt="Partes de la memoria RAM">
+      </div>
+    </div>
 
-    <h4>1.3.1 Operaciones básicas sobre las estructuras de datos</h4>
-    <p>Las operaciones que se pueden hacer con estructuras de datos son varias. Las más básicas son: </p>
-    <ul>
-      <li>Insertar : Agregar un valor a la estructura. </li>
-      <li>Eliminar : Borrar un valor existente. </li>
-      <li>Buscar : Encontrar un valor específico. </li>
-      <li>Actualizar: Modificar un valor existente. </li>
-      <li>Recorrer : Acceder a cada elemento de la estructura. </li>
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span class="material-symbols-outlined align-middle me-2">edit_note</span>Ejercicio
+        Reflexivo</h4>
+      <hr>
+      <p>Responde a las siguientes preguntas con base en la teoría revisada:</p>
+      <ol class="mb-0">
+        <li>Para almacenar el sexo de una persona, ¿cuántos bits se requieren?</li>
+        <li>¿Cuántos bits se requieren para almacenar los siete días de la semana?</li>
+        <li>¿Cuántos bits se requieren para almacenar los meses del año?</li>
+        <li>Para almacenar el código ASCII, ¿cuántos bits se requieren?</li>
+      </ol>
+    </div>
+
+    <h4 class="mt-5 mb-4 text-primary">1.2.1 Clasificación de datos simples y compuestos</h4>
+    <p>De acuerdo con la forma en que los datos se organizan, se clasifican en:</p>
+    <ul class="mb-4 list-unstyled">
+      <li><strong>a)</strong> Tipos de datos simples (primitivos).</li>
+      <li><strong>b)</strong> Tipos de datos compuestos o estructurados.</li>
     </ul>
-    <br>
 
-    <a href="index.html" target="_self"><img src="imas/common/btn_atras.png" class="bot" style="float:left;"
-        alt="Atrás"></a>
-    <a href="unidad2.html" target="_self"><img src="imas/common/btn_adelante.png" class="bot" style="float:right;"
-        alt="Adelante"></a>
+    <h5 class="mt-4">a) Tipos de datos simples</h5>
+    <p>Un tipo de dato simple hace referencia a un único valor a la vez y ocupa solo una casilla de memoria. En este
+      grupo se encuentran:</p>
+    <ul>
+      <li><strong>Enteros (int):</strong> números sin decimales, como <code>10</code>, <code>-3</code> o
+        <code>2026</code>.
+      </li>
+      <li><strong>Flotantes (float o double):</strong> números con punto decimal, como <code>3.14</code> o
+        <code>-0.25</code>.
+      </li>
+      <li><strong>Caracter (char):</strong> un solo símbolo, como <code>'a'</code>, <code>'9'</code> o <code>'$'</code>.
+      </li>
+      <li><strong>Booleanos (bool):</strong> representan valores lógicos: verdadero (<code>true</code>) o falso
+        (<code>false</code>).</li>
+    </ul>
 
+    <h5 class="mt-4 mb-3">Direccionamiento de la memoria</h5>
+    <p>La unidad de control se dirige a los distintos bytes de memoria por su posición. Todos los lenguajes de
+      programación permiten dar un nombre a las posiciones de memoria, conocidas como <strong>variables</strong>. Una
+      variable puede cambiar su contenido o almacenar un valor constante.</p>
+
+    <p>En C++, declaramos variables y reservamos memoria de la siguiente manera:</p>
+
+    <div class="bg-dark rounded p-3 mb-4 shadow-sm" style="max-width: 600px;">
+      <pre class="mb-0"><code class="language-cpp">int Base = 3;
+int Altura = 2; 
+int Area;</code></pre>
+    </div>
+
+    <div class="row align-items-center mb-5">
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-justify">
+        <p>Automáticamente, la unidad de control asigna a las casillas de memoria las direcciones correspondientes a
+          esas variables. Al declararlas como tipo <code>int</code>, solo permitirán datos enteros. En este ejemplo, se
+          les <strong>asignó</strong> un valor inicial a <code>Base=3</code> y <code>Altura=2</code>.</p>
+      </div>
+      <div class="col-12 col-lg-6 text-center">
+        <img src="imas/u1/u1_6.png" class="img-fluid rounded shadow-sm" alt="Base, Altura y Area en la memoria RAM">
+      </div>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span
+          class="material-symbols-outlined align-middle me-2">code_blocks</span>ACTIVIDAD A1</h4>
+      <hr>
+      <p><strong>Propósito:</strong> Utilizar un lenguaje de programación para declarar variables en memoria, asignando
+        el tipo de dato simple entero.</p>
+      <p>La intención es comprender la declaración de variables, la reserva de memoria y el proceso de entrada y salida
+        de datos.</p>
+
+      <p class="mt-3 fw-bold">Instrucciones:</p>
+      <ol>
+        <li>Declara las variables <code>Base</code> y <code>Altura</code> de tipo entero, asignándoles los valores 3 y 2
+          respectivamente. Declara también la variable <code>Area</code>.</li>
+        <li>Realiza la operación aritmética para obtener el área del triángulo.</li>
+        <li>Manda a imprimir el resultado con el mensaje: <em>"El valor del área del triángulo es: "</em>.</li>
+      </ol>
+
+      <p class="mt-3 fw-bold">Evidencia a entregar:</p>
+      <ul class="mb-0">
+        <li>Programa fuente (ej. <code>LAAD_Programa_Variable.cpp</code>).</li>
+        <li>Programa ejecutable (<code>.exe</code>).</li>
+        <li>Archivo PDF con capturas de pantalla de la ejecución del programa.</li>
+        <li>Subir la evidencia a Google Classroom en la fecha y hora indicada.</li>
+      </ul>
+      <p class="mt-3 mb-0 text-end fw-bold text-success">Valor de la actividad: 10 puntos.</p>
+    </div>
+
+    <h5 class="mt-5">b) Tipos de datos compuestos</h5>
+    <p>Las estructuras de datos se caracterizan por usar un único nombre para hacer referencia a un grupo de casillas en
+      memoria. Tienen varios componentes de tipos simples. Un ejemplo clásico son los <strong>Arreglos
+        (arrays)</strong>: colecciones ordenadas de elementos del mismo tipo.</p>
+
+    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-4 mb-5 mt-4">
+      <img src="imas/u1/u1_7.png" class="img-fluid rounded shadow-sm" alt="Representación de un arreglo">
+      <img src="imas/u1/u1_8.png" class="img-fluid rounded shadow-sm" alt="Datos simples y estructurados">
+    </div>
+
+    <div class="pleca-temas mb-4 rounded shadow-sm mt-5">1.3 Representación de las estructuras de datos</div>
+
+    <div class="row align-items-center mb-5 mt-4">
+      <div class="col-12 col-lg-5 mb-4 mb-lg-0">
+        <p>Las estructuras de datos son fundamentales para el desarrollo de grandes sistemas de software. Permiten
+          organizar, almacenar y manipular datos de manera eficiente en la memoria de una computadora.</p>
+      </div>
+      <div class="col-12 col-lg-7 text-center">
+        <img src="imas/u1/u1_n.png" class="img-fluid rounded shadow-sm" alt="Clasificación de las estructuras de datos">
+      </div>
+    </div>
+
+    <h4 class="mt-4 mb-3 text-primary">1.3.1 Operaciones básicas sobre las estructuras de datos</h4>
+    <p>Las operaciones más comunes aplicables a la mayoría de las estructuras son:</p>
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong><span class="text-primary">+</span> Insertar:</strong> Agregar un valor a
+            la estructura.</li>
+          <li class="list-group-item"><strong><span class="text-danger">-</span> Eliminar:</strong> Borrar un valor
+            existente.</li>
+          <li class="list-group-item"><strong><span class="text-success">⌕</span> Buscar:</strong> Encontrar un valor
+            específico.</li>
+          <li class="list-group-item"><strong><span class="text-warning">↻</span> Actualizar:</strong> Modificar un
+            valor existente.</li>
+          <li class="list-group-item"><strong><span class="text-info">→</span> Recorrer:</strong> Acceder a cada
+            elemento secuencialmente.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="d-flex justify-content-between align-items-center mt-5 mb-5 pt-4 border-top">
+      <a href="index.html" class="btn btn-outline-primary d-flex align-items-center gap-2">
+        <span class="material-symbols-outlined">arrow_back</span> Inicio
+      </a>
+      <a href="unidad2.html" class="btn btn-primary d-flex align-items-center gap-2">
+        Unidad II <span class="material-symbols-outlined">arrow_forward</span>
+      </a>
+    </div>
+
+  </main>
+
+  <div class="footer-buttons shadow-lg">
+    <a href="pdf/practica_1_u1.pdf" target="_blank">
+      <button>
+        <span class="material-symbols-outlined">docs</span>
+        <span class="button-text text-start">Práctica Unidad 1</span>
+      </button>
+    </a>
+    <a href="pdf/ejemplo_de_solucion_p1u1.pdf" target="_blank">
+      <button>
+        <span class="material-symbols-outlined">fact_check</span>
+        <span class="button-text text-start">Ejemplo de solución</span>
+      </button>
+    </a>
+    <a href="https://view.officeapps.live.com/op/view.aspx?src=pdf/doc_del_proyecto_u1u2u3.docx" target="_blank"
+      rel="noopener noreferrer">
+      <button>
+        <span class="material-symbols-outlined">folder_copy</span>
+        <span class="button-text text-start">Documentación del proyecto</span>
+      </button>
+    </a>
   </div>
 
-  <div id="pleca_botones">
-    <center>
-      <a href="pdf/practica_1_u1.pdf" target="_blank"><img src="btn_ejercicios1.png" class="descargable"
-          alt="descargar ejercicios"></a> &nbsp; &nbsp;
-      <a href="pdf/ejemplo_de_solucion_p1u1.pdf" target="_blank"><img src="btn_solucion1.png" class="descargable"
-          alt="descargar soluciones"></a> &nbsp; &nbsp;
-      <a href="https://view.officeapps.live.com/op/view.aspx?src=pdf/doc_del_proyecto_u1u2u3.docx" target="_blank"
-        rel="noopener noreferrer"><img src="btn_documentacion.png" class="descargable"
-          alt="descargar documentación"></a>
-    </center>
-  </div>
-
-  <br><br><br><br><br><br><br><br><br>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
   <script src="js/jquery.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script src="js/gsap.min.js"></script>
   <script src="js/ScrollTrigger.min.js"></script>
   <script type="text/javascript" src="js/script.js"></script>
-
-  <div class="footer-buttons">
-    <button>
-      <span class="material-symbols-outlined">docs</span>
-      <span class="button-text">Práctica unidad 1</span>
-    </button>
-    <button>
-      <span class="material-symbols-outlined">fact_check</span>
-      <span class="button-text">Ejemplo de solución unidad 1</span>
-    </button>
-    <button>
-      <span class="material-symbols-outlined">folder_copy</span>
-      <span class="button-text">Documentación del proyecto</span>
-    </button>
-  </div>
 
 </body>
 
