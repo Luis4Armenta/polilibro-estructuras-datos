@@ -101,6 +101,241 @@
         font-size: 0.8rem;
       }
     }
+
+    /* --- Diagramas propios de la Unidad 4 --- */
+    .portada-u4 {
+      background: linear-gradient(135deg, #025373 0%, #012840 100%);
+      color: #fff;
+      border-radius: 0.5rem;
+      padding: 3.5rem 2rem;
+    }
+
+    .portada-u4 h1 {
+      font-weight: 700;
+      font-size: 2.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .portada-u4 p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 0;
+    }
+
+    .pseudocodigo {
+      background-color: #1e1e1e;
+      color: #d4d4d4;
+      border-radius: 0.5rem;
+      padding: 1rem 1.25rem;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      overflow-x: auto;
+    }
+
+    .pseudocodigo .kw {
+      color: #4fc1e9;
+      font-weight: 700;
+    }
+
+    .pseudocodigo .cm {
+      color: #7d8b99;
+      font-style: italic;
+    }
+
+    /* Árbol (pure-CSS org-chart tree) */
+    .tree,
+    .tree ul,
+    .tree li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+    }
+
+    .tree {
+      text-align: center;
+      display: inline-flex;
+      justify-content: center;
+      padding-top: 10px;
+    }
+
+    .tree ul {
+      display: flex;
+      padding-top: 20px;
+      position: relative;
+    }
+
+    .tree li {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px 8px 0 8px;
+      position: relative;
+    }
+
+    .tree li::before,
+    .tree li::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 50%;
+      border-top: 2px solid #025373;
+      width: 50%;
+      height: 20px;
+    }
+
+    .tree li::after {
+      right: auto;
+      left: 50%;
+      border-left: 2px solid #025373;
+    }
+
+    .tree li:only-child::after,
+    .tree li:only-child::before {
+      display: none;
+    }
+
+    .tree li:only-child {
+      padding-top: 0;
+    }
+
+    .tree li:first-child::before,
+    .tree li:last-child::after {
+      border: 0 none;
+    }
+
+    .tree li:last-child::before {
+      border-right: 2px solid #025373;
+      border-radius: 0 5px 0 0;
+    }
+
+    .tree li:first-child::after {
+      border-radius: 5px 0 0 0;
+    }
+
+    .tree ul::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      border-left: 2px solid #025373;
+      width: 0;
+      height: 20px;
+    }
+
+    .tree li .nodo-arbol {
+      border: 2px solid #012840;
+      border-radius: 6px;
+      padding: 8px 14px;
+      display: inline-block;
+      background-color: #eef6f9;
+      font-weight: 700;
+      color: #012840;
+      font-size: 0.9rem;
+    }
+
+    .tree li .nodo-arbol.raiz {
+      background-color: #025373;
+      color: #fff;
+    }
+
+    .tree li .nodo-carpeta {
+      border: 2px solid #012840;
+      border-radius: 6px;
+      padding: 8px 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background-color: #eef6f9;
+      color: #012840;
+      font-weight: 600;
+      font-size: 0.82rem;
+      white-space: nowrap;
+    }
+
+    /* Grafos: nodos y matriz */
+    .nodo-grafo {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background-color: #025373;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+    }
+
+    .matriz-diagrama {
+      display: inline-block;
+      border-collapse: collapse;
+    }
+
+    .matriz-diagrama td {
+      width: 46px;
+      height: 46px;
+      border: 2px solid #012840;
+      text-align: center;
+      font-weight: 600;
+      color: #012840;
+      background-color: #fff;
+      font-size: 0.85rem;
+    }
+
+    .matriz-diagrama td.encabezado {
+      border: none;
+      background: transparent;
+      color: #025373;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    .matriz-diagrama td.uno {
+      background-color: #dff5ec;
+      color: #05836b;
+    }
+
+    /* Lista de adyacencia */
+    .lista-wrap {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0;
+    }
+
+    .nodo {
+      display: flex;
+      border: 2px solid #012840;
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .nodo-dato {
+      padding: 8px 14px;
+      background-color: #eef6f9;
+      color: #012840;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+    }
+
+    .flecha-nodo {
+      margin: 0 6px;
+      color: #025373;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+
+    .nodo-null {
+      padding: 8px 12px;
+      border: 2px dashed #6c757d;
+      border-radius: 6px;
+      color: #6c757d;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
   </style>
 </head>
 
@@ -130,10 +365,10 @@
       <div class="collapse navbar-collapse order-lg-2" id="navbarText">
         <ul class="navbar-nav mx-auto justify-content-center mb-2 mb-lg-0 w-100">
           <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" aria-current="page" href="unidad1.html">Unidad I</a></li>
+          <li class="nav-item"><a class="nav-link" href="unidad1.html">Unidad I</a></li>
           <li class="nav-item"><a class="nav-link" href="unidad2.html">Unidad II</a></li>
           <li class="nav-item"><a class="nav-link" href="unidad3.html">Unidad III</a></li>
-          <li class="nav-item"><a class="nav-link active" href="unidad4.html">Unidad IV</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="unidad4.html">Unidad IV</a></li>
           <li class="nav-item"><a class="nav-link" href="referencias.html">Referencias</a></li>
           <li class="nav-item"><a class="nav-link" href="glosario.html">Glosario</a></li>
         </ul>
@@ -145,9 +380,612 @@
 
     <div class="text-center mb-5">
       <img src="imas/u4/portada.png" class="img-fluid rounded shadow-sm"
-        alt="Unidad Temática IV: Estructuras de datos no lineales: árboles y grafos">
+        alt="Unidad Temática I: Representación de datos">
     </div>
 
+    <section class="mb-5 text-center">
+      <h3 class="text-primary mb-3">Unidad de competencia</h3>
+      <p class="col-lg-8 mx-auto">Implementa estructuras de datos dinámicas no lineales en la memoria de una
+        computadora a partir del uso de árboles y grafos, su representación y sus posibilidades, así como un
+        lenguaje de programación.</p>
+    </section>
+
+    <div class="indice col-12 col-lg-8 mx-auto p-4 mb-5 shadow-sm rounded">
+      <p class="mb-3 fw-bold">Los siguientes temas se tratan en esta unidad:</p>
+      <ul class="list-unstyled lh-lg mb-0 no-bullets">
+        <li><strong>4.1 Árboles</strong>
+          <ul class="ms-4 list-unstyled">
+            <li>4.1.1 Representación</li>
+            <li>4.1.2 Formas de uso</li>
+            <li>4.1.3 Implementación</li>
+            <li>4.1.4 Operaciones permitidas</li>
+          </ul>
+        </li>
+        <li><strong>4.2 Grafos</strong>
+          <ul class="ms-4 list-unstyled">
+            <li>4.2.1 Representación</li>
+            <li>4.2.2 Formas de uso</li>
+            <li>4.2.3 Implementación</li>
+            <li>4.2.4 Operaciones permitidas</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h4 class="text-center mb-4 mt-5">¿Cómo crece un árbol de estructuras de datos?</h4>
+    <div class="row align-items-center mb-5">
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-justify">
+        <p>Visualicen un árbol, conteste la siguiente pregunta: ¿cómo crece un árbol? Por naturaleza, los árboles
+          crecen de la raíz hacia arriba, pero en una estructura de datos árbol es al revés: la raíz está arriba y
+          las ramas crecen hacia abajo.</p>
+        <p>Asimilemos una estructura de datos árbol con una carpeta de archivos que se almacenan en una computadora.
+          Tienen una carpeta principal que llamaremos <strong>Academia_Informática</strong>, dentro de ella se crean
+          más carpetas: <em>Presidencia_Base_Datos</em>, <em>Unidades_Aprendizaje_Ing_Inf</em> y
+          <em>Unidades_Aprendizaje_Ciencias</em>. Dentro de <em>Presidencia_Base_Datos</em> se crean
+          <em>Minutas_Juntas</em> y <em>Planeaciones_Didacticas</em>.
+        </p>
+        <p><em>Supongamos que se elimina la carpeta Academia_Informática, ¿se eliminan los archivos Minutas_Juntas y
+            Planeaciones_Didacticas?</em></p>
+        <p>Así es como funciona la estructura de datos Árbol.</p>
+      </div>
+      <div class="col-12 col-lg-6 text-center overflow-auto">
+        <ul class="tree">
+          <li>
+            <span class="nodo-carpeta raiz">📁 Academia_Informática</span>
+            <ul>
+              <li>
+                <span class="nodo-carpeta">📁 Presidencia_Base_Datos</span>
+                <ul>
+                  <li><span class="nodo-carpeta">📄 Minutas_Juntas</span></li>
+                  <li><span class="nodo-carpeta">📄 Planeaciones_Didacticas</span></li>
+                </ul>
+              </li>
+              <li><span class="nodo-carpeta">📁 Unidades_Aprendizaje_Ing_Inf</span></li>
+              <li><span class="nodo-carpeta">📁 Unidades_Aprendizaje_Ciencias</span></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pleca-temas mb-4 rounded shadow-sm">4.1 Árboles</div>
+
+    <h5 class="mt-4 mb-3 text-primary">¿Qué es un árbol general?</h5>
+    <p>En el ámbito de la informática, un árbol general es una estructura de datos dinámica no lineal jerárquica. Es
+      una colección de elementos finitos que se conocen como nodos, que están conectados por una serie de aristas y
+      los cuales mantienen una relación de parentesco de tipo padre-hijo. Los árboles generales se caracterizan
+      porque hay un único nodo raíz, cada nodo (excepto la raíz) tiene un único padre y hay un único camino desde la
+      raíz hasta cada nodo.</p>
+    <p>Para comprender el funcionamiento de esta estructura de datos, se requiere primeramente conocer:</p>
+
+    <div class="row mb-4">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong class="text-primary">Nodo:</strong> cada unidad básica de información
+            que compone el árbol.</li>
+          <li class="list-group-item"><strong class="text-primary">Nodo Raíz:</strong> el primer elemento del árbol
+            general, es el único que no posee antecesores.</li>
+          <li class="list-group-item"><strong class="text-primary">Nodo Hoja:</strong> elemento terminal que no
+            tiene hijos.</li>
+          <li class="list-group-item"><strong class="text-primary">Nodo Interno:</strong> aquel que posee al menos
+            un descendiente o hijo.</li>
+          <li class="list-group-item"><strong class="text-primary">Subárbol:</strong> conjunto de nodos
+            descendientes que parten de un nodo padre específico, ya sea por su rama izquierda o derecha.</li>
+          <li class="list-group-item"><strong class="text-primary">Nivel:</strong> longitud del camino desde la raíz
+            hasta un nodo específico. Se incrementa en una unidad por cada ramificación (la raíz comienza en el
+            nivel 0).</li>
+          <li class="list-group-item"><strong class="text-primary">Grado:</strong> número de descendientes directos
+            que posee un nodo. El "grado del árbol" es el grado máximo encontrado entre todos sus nodos.</li>
+          <li class="list-group-item"><strong class="text-primary">Altura:</strong> número total de capas o niveles
+            que crecen a partir de la raíz.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span class="material-symbols-outlined align-middle me-2">edit_note</span>Ejercicio
+        Reflexivo</h4>
+      <hr>
+      <p class="mb-0">Considerando un árbol dado por el docente, llena un cuadro con los siguientes datos para cada
+        nodo: <strong>Nodo, Altura, Nivel, Grado</strong>.</p>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">4.1.1 Representación</h5>
+    <p>Este tipo de estructura de datos permite modelar situaciones de la vida real, como el organigrama de una
+      empresa, donde la raíz representa la posición jerárquica más alta (ejemplo el presidente) y de ella se
+      desprenden los distintos niveles de mando.</p>
+
+    <div class="text-center my-4 overflow-auto">
+      <ul class="tree">
+        <li>
+          <span class="nodo-arbol raiz">Presidente</span>
+          <ul>
+            <li>
+              <span class="nodo-arbol">Gerente A</span>
+              <ul>
+                <li><span class="nodo-arbol">Supervisor 1</span></li>
+                <li><span class="nodo-arbol">Supervisor 2</span></li>
+              </ul>
+            </li>
+            <li><span class="nodo-arbol">Gerente B</span></li>
+          </ul>
+        </li>
+      </ul>
+      <p class="text-muted mt-2 mb-0" style="font-size:0.85rem;">Nivel 0 = raíz, Nivel 1 = gerentes, Nivel 2 =
+        supervisores</p>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">4.1.2 Formas de uso</h5>
+    <p>Los árboles se utilizan para realizar recorridos; estos recorridos se hacen sobre los <strong>árboles
+        binarios</strong>.</p>
+    <p>¿No es lo mismo un árbol general a un árbol binario? No, porque un árbol general puede tener más de dos
+      hijos y en cambio un árbol binario puede tener uno o como máximo dos hijos descendientes directos.</p>
+    <p>Un árbol binario se considera completo o balanceado cuando todos los nodos poseen exactamente dos hijos,
+      excepto aquellos situados en el último nivel (las hojas).</p>
+    <p>Existen tres formas de recorrer un árbol binario:</p>
+
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong class="text-primary">PREorden</strong> (prefijo PRE que significa
+            antes de): Raíz — Izquierda — Derecha.</li>
+          <li class="list-group-item"><strong class="text-primary">INorden</strong> (prefijo IN que significa dentro
+            de): Izquierda — Raíz — Derecha.</li>
+          <li class="list-group-item"><strong class="text-primary">POSTorden</strong> (prefijo POST que significa
+            después de): Izquierda — Derecha — Raíz.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">4.1.3 Implementación</h5>
+    <p>La implementación de los árboles se realiza mediante el uso de memoria estática a través de estructuras de
+      arreglos o del uso de la memoria dinámica con las estructuras dinámicas que pueden crecer o decrecer, según la
+      necesidad del programa durante su ejecución.</p>
+    <p>Cada nodo en memoria dinámica se representa como un registro dividido en tres secciones:</p>
+
+    <div class="row mb-4">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong class="text-primary">Enlace Izquierdo (*izqnodo):</strong> puntero
+            hacia el hijo o subárbol izquierdo.</li>
+          <li class="list-group-item"><strong class="text-primary">Información (info):</strong> el dato o valor
+            almacenado en el nodo.</li>
+          <li class="list-group-item"><strong class="text-primary">Enlace Derecho (*dernodo):</strong> puntero hacia
+            el hijo o subárbol derecho.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p>Utilizando árboles binarios se pueden representar expresiones matemáticas. Por ejemplo, la expresión
+      <code>(A * B) + (C / D) ^ 35</code> puede ser visualizada como una estructura donde los operadores son nodos
+      internos y los operandos son nodos hoja.
+    </p>
+
+    <div class="text-center my-4 overflow-auto">
+      <ul class="tree">
+        <li>
+          <span class="nodo-arbol raiz">+</span>
+          <ul>
+            <li>
+              <span class="nodo-arbol">*</span>
+              <ul>
+                <li><span class="nodo-arbol">A</span></li>
+                <li><span class="nodo-arbol">B</span></li>
+              </ul>
+            </li>
+            <li>
+              <span class="nodo-arbol">^</span>
+              <ul>
+                <li>
+                  <span class="nodo-arbol">/</span>
+                  <ul>
+                    <li><span class="nodo-arbol">C</span></li>
+                    <li><span class="nodo-arbol">D</span></li>
+                  </ul>
+                </li>
+                <li><span class="nodo-arbol">35</span></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+      <p class="text-muted mt-2 mb-0" style="font-size:0.85rem;">Árbol de expresión de (A * B) + (C / D) ^ 35</p>
+    </div>
+
+    <p><strong>Recorrer un árbol</strong> significa visitar cada uno de sus nodos exactamente una vez.</p>
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong class="text-primary">INorden:</strong> se recorre el subárbol
+            izquierdo, se procesa la raíz y finalmente el subárbol derecho.</li>
+          <li class="list-group-item"><strong class="text-primary">PREorden:</strong> se procesa la raíz, se recorre
+            el subárbol izquierdo y por último se recorre el subárbol derecho.</li>
+          <li class="list-group-item"><strong class="text-primary">POSTorden:</strong> se procesan ambos hijos antes
+            de subir a la raíz. Este método es ideal para liberar memoria (borrado de nodos).</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span
+          class="material-symbols-outlined align-middle me-2">code_blocks</span>ACTIVIDAD UTIV_A1: Árbol
+        general</h4>
+      <hr>
+      <p><strong>Propósito:</strong> Aplicar las definiciones de un árbol general, de un árbol binario y las formas
+        de uso.</p>
+      <p class="mt-3 fw-bold">Instrucciones:</p>
+      <ol class="mb-0">
+        <li>Responde: ¿Qué es un Árbol General? ¿Qué es un Árbol Binario? ¿Cuál es la diferencia entre un árbol
+          general y un binario? ¿Cuáles son las tres formas de recorrer un árbol?</li>
+        <li>Llena la tabla de propiedades de nodos (Altura, Nivel, Grado) basándote en el árbol de ejercicios.</li>
+        <li>Recorre el árbol en INorden, PREorden y POSTorden.</li>
+        <li>Responde sobre implementación: ¿Cómo es la representación de memoria de una estructura dinámica? ¿Cómo
+          se declara un árbol? ¿Qué es un apuntador o un puntero?</li>
+      </ol>
+      <p class="mt-3 mb-0 text-end fw-bold text-success">Valor de la actividad: 10 puntos.</p>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">4.1.4 Operaciones permitidas</h5>
+    <p>Las operaciones (funciones) que se realizan sobre los árboles binarios son las siguientes:</p>
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><code>void insertanodonuevo(ARBOL *, int)</code>: insertar un nodo nuevo y
+            asignación de valores.</li>
+          <li class="list-group-item"><code>void inorden(ARBOL)</code>: función que identifica el recorrido en
+            inorden.</li>
+          <li class="list-group-item"><code>void preorden(ARBOL)</code>: función que identifica el recorrido en
+            preorden.</li>
+          <li class="list-group-item"><code>void postorden(ARBOL)</code>: función que identifica el recorrido en
+            postorden.</li>
+          <li class="list-group-item"><code>void treefree(ARBOL)</code>: función para eliminar nodos del subárbol
+            (hijos primero, luego la raíz) para liberar memoria.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span
+          class="material-symbols-outlined align-middle me-2">code_blocks</span>ACTIVIDAD UTIV_A2: Programa
+        recorridos_árbol_binario</h4>
+      <hr>
+      <p><strong>Propósito:</strong> Utilizar un lenguaje de programación para declarar la estructura dinámica de un
+        árbol binario y aplicar las funciones de recorrido.</p>
+      <p class="mt-3 fw-bold">Instrucciones:</p>
+      <p>Declara el árbol binario con un struct:</p>
+      <div class="bg-dark rounded p-3 mb-3 shadow-sm">
+        <pre class="mb-0"><code class="language-c">struct nodoarbol {
+    struct nodoarbol *izqnodo;
+    int info;
+    struct nodoarbol *dernodo;
+};
+typedef struct nodoarbol NODO;
+typedef NODO *ARBOL;</code></pre>
+      </div>
+      <p class="mb-0">Asigna valores llamando a <code>insertanodonuevo</code>, recorre llamando a las tres funciones
+        de recorrido y libera el espacio con <code>treefree</code>. Entregar código, ejecutable y reporte en PDF.</p>
+      <p class="mt-3 mb-0 text-end fw-bold text-success">Valor de la actividad: 10 puntos.</p>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">Transformación de un árbol general a un árbol binario</h5>
+    <p>¿Se pueden realizar los tres recorridos (INorden, PREorden y POSTorden) a un árbol general? No, porque los
+      recorridos están diseñados para subárboles izquierdo y derecho; no hay un "tercer nodo hijo". Si se desea
+      recorrer, primero se debe transformar el árbol general a binario aplicando estos pasos:</p>
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong class="text-primary">1.</strong> Enlazar los hijos de cada nodo en
+            forma horizontal (los hermanos).</li>
+          <li class="list-group-item"><strong class="text-primary">2.</strong> Enlazar en forma vertical el nodo
+            padre con el nodo hijo que se encuentra más a la izquierda.</li>
+          <li class="list-group-item"><strong class="text-primary">3.</strong> Rotar el diagrama resultante
+            aproximadamente 45 grados hacia la izquierda para obtener el árbol binario.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span
+          class="material-symbols-outlined align-middle me-2">code_blocks</span>ACTIVIDAD UTIV_A3: Transformación de
+        un árbol general a un árbol binario</h4>
+      <hr>
+      <p><strong>Propósito:</strong> Aplicar los pasos para transformar un árbol general a un árbol binario y
+        codificarlo.</p>
+      <p class="mb-0"><strong>Instrucciones:</strong> Contesta cuáles son los pasos de transformación, aplica los
+        pasos a un árbol de ejercicio, anota cómo quedarían los tres recorridos y luego crea el código
+        correspondiente.</p>
+      <p class="mt-3 mb-0 text-end fw-bold text-success">Valor de la actividad: 10 puntos.</p>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span class="material-symbols-outlined align-middle me-2">edit_note</span>Cierre:
+        Consolidación y conclusión (Árboles)</h4>
+      <hr>
+      <p class="mb-0">Cuando vimos las listas enlazadas, el camino era en línea recta. En los árboles, los caminos
+        se ramifican. Se concluye que la estructura de datos árbol es mucho más rápida para realizar operaciones de
+        meter, eliminar y buscar elementos comparada con los arreglos y listas. Como es una estructura dinámica no
+        lineal, puede incrementar o decrementar su tamaño de acuerdo con las necesidades.</p>
+    </div>
+
+    <div class="pleca-temas mb-4 rounded shadow-sm mt-5">4.2 Grafos</div>
+
+    <h5 class="mt-4 mb-3 text-primary">¿Qué es un grafo?</h5>
+    <p>Como se vio en el tema anterior, los árboles son estructuras de datos dinámicas no lineales jerárquicas. Los
+      grafos también son dinámicos y no lineales, pero a diferencia de los árboles, <strong>no son
+        jerárquicos</strong>. En un grafo, un nodo padre puede tener muchos nodos hijos y un nodo hijo puede tener
+      muchos nodos padres (relación de M:N).</p>
+    <p>Un claro ejemplo de la vida real de la aplicación de un grafo son las redes sociales (como Facebook), donde
+      los nodos son las personas y las aristas son las relaciones (amistades) que hay entre ellas, generando una red
+      libre.</p>
+
+    <p class="fw-bold mt-4">Elementos de un grafo:</p>
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong class="text-primary">Vértices o Nodos:</strong> conjunto finito de
+            objetos que representan la información (ej. V = {1, 2, 3, 4, 5}).</li>
+          <li class="list-group-item"><strong class="text-primary">Aristas o Arcos:</strong> conjunto finito de
+            líneas que representan las relaciones entre los vértices (ej. A = {a, b, c, d…}).</li>
+          <li class="list-group-item"><strong class="text-primary">Relación de Incidencia:</strong> función que
+            asocia cada arista con un par de vértices.</li>
+          <li class="list-group-item"><strong class="text-primary">Aristas adyacentes:</strong> dos aristas que
+            convergen dentro del mismo vértice.</li>
+          <li class="list-group-item"><strong class="text-primary">Aristas múltiples (paralelas):</strong> dos o más
+            aristas que conectan los dos mismos vértices.</li>
+          <li class="list-group-item"><strong class="text-primary">Lazo (Loop):</strong> arista cuyos extremos
+            inciden sobre el mismo vértice.</li>
+          <li class="list-group-item"><strong class="text-primary">Grado o Valencia:</strong> número de aristas que
+            inciden sobre el vértice o nodo (un lazo cuenta doble).</li>
+          <li class="list-group-item"><strong class="text-primary">Grafo completo o fuerte:</strong> cuando cada
+            vértice está conectado con todos los demás (grado igual a n-1). Si falta una conexión, es un <strong>grafo
+              débil</strong>.</li>
+          <li class="list-group-item"><strong class="text-primary">Caminos y Recorridos:</strong> un camino simple
+            es una secuencia de vértices donde no se repite ningún nodo.</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="fw-bold">Grafos Dirigidos (Digrafos) vs. No Dirigidos:</p>
+    <div class="row align-items-center mb-5">
+      <div class="col-12 col-lg-7 mb-4 mb-lg-0">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong class="text-primary">Dirigidos:</strong> las aristas tienen un
+            sentido definido (flechas). Si hay una arista de 'u' a 'v', se puede ir de 'u' a 'v', pero no
+            necesariamente de 'v' a 'u'.</li>
+          <li class="list-group-item"><strong class="text-primary">No Dirigidos:</strong> la relación es simétrica
+            (líneas simples). Se puede transitar en ambos sentidos.</li>
+        </ul>
+      </div>
+      <div class="col-12 col-lg-5 text-center">
+        <svg viewBox="0 0 260 120" style="max-width: 260px; width: 100%;">
+          <circle cx="40" cy="60" r="18" fill="#025373" />
+          <text x="40" y="65" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">u</text>
+          <circle cx="150" cy="60" r="18" fill="#025373" />
+          <text x="150" y="65" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">v</text>
+          <line x1="58" y1="58" x2="130" y2="58" stroke="#012840" stroke-width="2" marker-end="url(#arrowU4)" />
+          <text x="90" y="45" text-anchor="middle" fill="#025373" font-size="11">dirigido</text>
+
+          <circle cx="210" cy="60" r="18" fill="#025373" />
+          <text x="210" y="65" text-anchor="middle" fill="#fff" font-size="13" font-weight="700">w</text>
+          <defs>
+            <marker id="arrowU4" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#012840" />
+            </marker>
+          </defs>
+        </svg>
+        <p class="text-muted mt-1 mb-0" style="font-size:0.8rem;">u → v : arista dirigida</p>
+      </div>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">4.2.1 Representación</h5>
+    <p>Existen dos formas para representar un grafo en memoria:</p>
+
+    <p class="fw-bold mt-4">1. Estática: Matriz de Adyacencia</p>
+    <p>Una matriz (arreglo bidimensional) donde se almacenan las relaciones. Se identifica si hay una relación entre
+      los vértices con el número 1 y la ausencia con el 0. Además, se requiere un vector para almacenar el nombre de
+      los vértices (ej. <code>Vector_Vertice[4] = {'a', 'b', 'c', 'd'}</code>).</p>
+
+    <div class="text-center my-4">
+      <table class="matriz-diagrama mx-auto">
+        <tr>
+          <td class="encabezado"></td>
+          <td class="encabezado">a</td>
+          <td class="encabezado">b</td>
+          <td class="encabezado">c</td>
+          <td class="encabezado">d</td>
+        </tr>
+        <tr>
+          <td class="encabezado">a</td>
+          <td>0</td>
+          <td class="uno">1</td>
+          <td>0</td>
+          <td class="uno">1</td>
+        </tr>
+        <tr>
+          <td class="encabezado">b</td>
+          <td class="uno">1</td>
+          <td>0</td>
+          <td class="uno">1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td class="encabezado">c</td>
+          <td>0</td>
+          <td class="uno">1</td>
+          <td>0</td>
+          <td class="uno">1</td>
+        </tr>
+        <tr>
+          <td class="encabezado">d</td>
+          <td class="uno">1</td>
+          <td>0</td>
+          <td class="uno">1</td>
+          <td>0</td>
+        </tr>
+      </table>
+      <p class="text-muted mt-2 mb-0" style="font-size:0.85rem;">Matriz_Adyacencia para Vector_Vertice[4] =
+        {'a','b','c','d'}</p>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span
+          class="material-symbols-outlined align-middle me-2">code_blocks</span>ACTIVIDAD UTIV_A4:
+        Grafo_Matriz_adyacencia</h4>
+      <hr>
+      <p><strong>Propósito:</strong> Programar una <code>Matriz_Adyacencia[6][6]</code> y un
+        <code>Vector_Vertices[6]</code>.
+      </p>
+      <p class="mb-0"><strong>Instrucciones:</strong> Responde qué es un grafo y grafo dirigido. Identifica
+        vértices, aristas, grado, caminos simples y si es fuerte/débil basándose en un ejercicio. Declara la matriz
+        y el vector en código e implementa la función <code>gotoxy(int x, int y)</code> para dibujar el grafo en la
+        consola.</p>
+      <p class="mt-3 mb-0 text-end fw-bold text-success">Valor de la actividad: 10 puntos.</p>
+    </div>
+
+    <p class="fw-bold mt-5">2. Dinámica: Lista de Adyacencia</p>
+    <p>Los nodos forman un arreglo o lista principal, y cada nodo apunta a una lista enlazada secundaria que
+      contiene los nodos vecinos (relacionados por aristas).</p>
+
+    <div class="text-center my-4 overflow-auto">
+      <div class="lista-wrap justify-content-center">
+        <div class="nodo">
+          <div class="nodo-dato">a</div>
+        </div>
+        <span class="flecha-nodo">→</span>
+        <div class="nodo">
+          <div class="nodo-dato">b</div>
+        </div>
+        <span class="flecha-nodo">→</span>
+        <div class="nodo">
+          <div class="nodo-dato">d</div>
+        </div>
+        <span class="flecha-nodo">→</span>
+        <div class="nodo-null">NULL</div>
+      </div>
+      <p class="text-muted mt-2 mb-0" style="font-size:0.85rem;">Lista de adyacencia del vértice 'a' → vecinos b, d</p>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong class="text-success">Ventaja:</strong> espacio eficiente (solo ocupa
+            memoria para aristas reales).</li>
+          <li class="list-group-item"><strong class="text-danger">Desventaja:</strong> tiempo de búsqueda
+            ligeramente superior por el recorrido secuencial.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span
+          class="material-symbols-outlined align-middle me-2">code_blocks</span>ACTIVIDAD UTIV_A5:
+        Lista_Adyacencia</h4>
+      <hr>
+      <p><strong>Propósito:</strong> Modelar una situación mediante lista de adyacencia.</p>
+      <p class="mb-0"><strong>Instrucciones:</strong> Resuelve el caso del polideportivo "Mente Sana" (20
+        instalaciones, 15 ocupadas). Crea una lista de adyacencia y diagrama esquemático que permita un listado
+        ordenado. Declara el arreglo de nodos y las listas enlazadas en código.</p>
+      <p class="mt-3 mb-0 text-end fw-bold text-success">Valor de la actividad: 10 puntos.</p>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">4.2.2 Formas de uso</h5>
+    <p>Se utilizan para análisis de caminos (conectividad y accesibilidad).</p>
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong class="text-primary">Redes sociales:</strong> Facebook (no dirigido,
+            amistad mutua). Twitter/Instagram representan grafos dirigidos (A sigue a B, pero B no necesariamente a
+            A).</li>
+          <li class="list-group-item"><strong class="text-primary">Rutas:</strong> algoritmo de Dijkstra para
+            encontrar el camino más corto o aplicaciones de GPS y mapas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">4.2.3 Implementación</h5>
+    <p>Se implementan algoritmos de rutas (Dijkstra) usando matrices o listas de adyacencia. Son vitales para la
+      logística, permitiendo entregar productos en el momento oportuno, en el lugar adecuado y al menor costo
+      posible evaluando distancias.</p>
+
+    <h5 class="mt-5 mb-3 text-primary">4.2.4 Operaciones permitidas</h5>
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item">Encontrar la ruta óptima entre nodos (ej. Dijkstra).</li>
+          <li class="list-group-item">Realizar búsquedas en anchura (BFS).</li>
+          <li class="list-group-item">Realizar búsquedas en profundidad (DFS).</li>
+          <li class="list-group-item">Insertar/Eliminar nodos.</li>
+          <li class="list-group-item">Insertar/Eliminar aristas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span class="material-symbols-outlined align-middle me-2">edit_note</span>Ejercicio
+        final (Logística)</h4>
+      <hr>
+      <p>Una empresa reparte paquetes en CDMX entre las zonas Norte (N), Sur (S), Este (E) y Oeste (O).</p>
+      <p class="fw-bold mb-2">Rutas:</p>
+      <ul>
+        <li>Doble sentido N ↔ S.</li>
+        <li>Doble sentido S ↔ E.</li>
+        <li>Un solo sentido O → S.</li>
+        <li>Un solo sentido E → O.</li>
+      </ul>
+
+      <div class="text-center my-4">
+        <svg viewBox="0 0 320 260" style="max-width: 320px; width: 100%;">
+          <defs>
+            <marker id="arrowLog" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
+              <path d="M0,0 L6,3 L0,6 Z" fill="#012840" />
+            </marker>
+          </defs>
+          <!-- N <-> S -->
+          <line x1="160" y1="45" x2="160" y2="205" stroke="#012840" stroke-width="2" marker-end="url(#arrowLog)"
+            marker-start="url(#arrowLog)" />
+          <!-- S <-> E -->
+          <line x1="178" y1="215" x2="255" y2="160" stroke="#012840" stroke-width="2" marker-end="url(#arrowLog)"
+            marker-start="url(#arrowLog)" />
+          <!-- O -> S (un solo sentido) -->
+          <line x1="90" y1="150" x2="150" y2="205" stroke="#012840" stroke-width="2" marker-end="url(#arrowLog)" />
+          <!-- E -> O (un solo sentido) -->
+          <line x1="255" y1="150" x2="90" y2="140" stroke="#012840" stroke-width="2" marker-end="url(#arrowLog)" />
+
+          <circle cx="160" cy="30" r="22" fill="#025373" />
+          <text x="160" y="36" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">N</text>
+
+          <circle cx="160" cy="220" r="22" fill="#025373" />
+          <text x="160" y="226" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">S</text>
+
+          <circle cx="270" cy="150" r="22" fill="#025373" />
+          <text x="270" y="156" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">E</text>
+
+          <circle cx="70" cy="145" r="22" fill="#025373" />
+          <text x="70" y="151" text-anchor="middle" fill="#fff" font-size="14" font-weight="700">O</text>
+        </svg>
+        <p class="text-muted mt-1 mb-0" style="font-size:0.85rem;">Grafo mixto: N↔S y S↔E no dirigidas; O→S y E→O
+          dirigidas</p>
+      </div>
+
+      <p class="fw-bold mb-2">Resuelve:</p>
+      <ol class="mb-0">
+        <li>Dibuja el grafo.</li>
+        <li>¿Qué tipo de grafo es?</li>
+        <li>Si un camión sale del Este, ¿puede llegar al Sur? Escribe el camino.</li>
+        <li>¿Es posible viajar de Sur a Este? Justifiquen.</li>
+      </ol>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span class="material-symbols-outlined align-middle me-2">edit_note</span>Cierre:
+        Consolidación y conclusión (Grafos)</h4>
+      <hr>
+      <p>¿Dónde se usan a gran escala? El motor de búsqueda de Google indexa el internet como un grafo gigante donde
+        cada web es un nodo y cada hipervínculo es una arista dirigida.</p>
+      <p class="mb-0">Se concluye que los grafos, como estructura dinámica no lineal, representan relaciones
+        complejas de forma rápida, visual y flexible, logrando búsquedas eficientes en entornos con conexiones de
+        múltiples vías.</p>
+    </div>
 
     <div class="d-flex justify-content-between align-items-center mt-5 mb-5 pt-4 border-top">
       <a href="unidad3.html" class="btn btn-outline-primary d-flex align-items-center gap-2">
@@ -161,13 +999,13 @@
   </main>
 
   <div class="footer-buttons shadow-lg">
-    <a href="pdf/practica_1_u1.pdf" target="_blank">
+    <a href="pdf/practica_4_u4.pdf" target="_blank">
       <button>
         <span class="material-symbols-outlined">docs</span>
         <span class="button-text text-start">Práctica Unidad 4</span>
       </button>
     </a>
-    <a href="pdf/ejemplo_de_solucion_p1u1.pdf" target="_blank">
+    <a href="pdf/ejemplo_de_solucion_p4u4.pdf" target="_blank">
       <button>
         <span class="material-symbols-outlined">fact_check</span>
         <span class="button-text text-start">Ejemplo de solución</span>

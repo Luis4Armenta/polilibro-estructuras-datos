@@ -101,6 +101,113 @@
         font-size: 0.8rem;
       }
     }
+
+    /* --- Diagramas propios de la Unidad 2 (no requieren imágenes externas) --- */
+    .portada-u2 {
+      background: linear-gradient(135deg, #025373 0%, #012840 100%);
+      color: #fff;
+      border-radius: 0.5rem;
+      padding: 3.5rem 2rem;
+    }
+
+    .portada-u2 h1 {
+      font-weight: 700;
+      font-size: 2.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .portada-u2 p {
+      font-size: 1.1rem;
+      opacity: 0.9;
+      margin-bottom: 0;
+    }
+
+    .cajon {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 6px 10px;
+    }
+
+    .cajon .cajon-caja {
+      width: 68px;
+      height: 68px;
+      border: 2px solid #025373;
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background-color: #eef6f9;
+      color: #012840;
+    }
+
+    .cajon .cajon-idx {
+      margin-top: 6px;
+      font-size: 0.8rem;
+      color: #025373;
+      font-weight: 700;
+    }
+
+    .celda-arreglo {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 3px 10px;
+    }
+
+    .celda-arreglo .celda-valor {
+      width: 46px;
+      height: 46px;
+      border: 2px solid #012840;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.85rem;
+      font-weight: 600;
+      background-color: #fff;
+      color: #012840;
+    }
+
+    .celda-arreglo .celda-idx {
+      margin-top: 4px;
+      font-size: 0.75rem;
+      color: #6c757d;
+    }
+
+    .matriz-diagrama {
+      display: inline-block;
+      border-collapse: collapse;
+    }
+
+    .matriz-diagrama td {
+      width: 52px;
+      height: 52px;
+      border: 2px solid #012840;
+      text-align: center;
+      font-weight: 600;
+      color: #012840;
+      background-color: #fff;
+      font-size: 0.85rem;
+    }
+
+    .matriz-diagrama td.encabezado {
+      border: none;
+      background: transparent;
+      color: #025373;
+      font-weight: 700;
+      font-size: 0.8rem;
+    }
+
+    .matriz-emoji td {
+      font-size: 1.4rem;
+    }
+
+    .matriz-identidad td.uno {
+      background-color: #dff5ec;
+      color: #05836b;
+    }
   </style>
 </head>
 
@@ -130,8 +237,8 @@
       <div class="collapse navbar-collapse order-lg-2" id="navbarText">
         <ul class="navbar-nav mx-auto justify-content-center mb-2 mb-lg-0 w-100">
           <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-          <li class="nav-item"><a class="nav-link" aria-current="page" href="unidad1.html">Unidad I</a></li>
-          <li class="nav-item"><a class="nav-link active" href="unidad2.html">Unidad II</a></li>
+          <li class="nav-item"><a class="nav-link" href="unidad1.html">Unidad I</a></li>
+          <li class="nav-item"><a class="nav-link active" aria-current="page" href="unidad2.html">Unidad II</a></li>
           <li class="nav-item"><a class="nav-link" href="unidad3.html">Unidad III</a></li>
           <li class="nav-item"><a class="nav-link" href="unidad4.html">Unidad IV</a></li>
           <li class="nav-item"><a class="nav-link" href="referencias.html">Referencias</a></li>
@@ -145,9 +252,556 @@
 
     <div class="text-center mb-5">
       <img src="imas/u2/portada.png" class="img-fluid rounded shadow-sm"
-        alt="Unidad Temática II: Estructuras de datos lineales: pilas, colas y listas enlazadas">
+        alt="Unidad Temática I: Representación de datos">
     </div>
 
+    <section class="mb-5 text-center">
+      <h3 class="text-primary mb-3">Unidad de competencia</h3>
+      <p class="col-lg-8 mx-auto">Implementa estructuras de datos estáticas en la memoria de una
+        computadora a partir del uso de arreglos, su representación y sus posibilidades, así como un lenguaje de
+        programación.</p>
+    </section>
+
+    <div class="indice col-12 col-lg-8 mx-auto p-4 mb-5 shadow-sm rounded">
+      <p class="mb-3 fw-bold">Los siguientes temas se tratan en esta unidad:</p>
+      <ul class="list-unstyled lh-lg mb-0 no-bullets">
+        <li><strong>2.1 Arreglos unidimensionales</strong>
+          <ul class="ms-4 list-unstyled">
+            <li>2.1.1 Representación</li>
+            <li>2.1.2 Formas de uso</li>
+            <li>2.1.3 Implementación</li>
+            <li>2.1.4 Operaciones permitidas</li>
+          </ul>
+        </li>
+        <li><strong>2.2 Arreglos bidimensionales</strong>
+          <ul class="ms-4 list-unstyled">
+            <li>2.2.1 Representación</li>
+            <li>2.2.2 Formas de uso</li>
+            <li>2.2.3 Implementación</li>
+            <li>2.2.4 Operaciones permitidas</li>
+          </ul>
+        </li>
+        <li><strong>2.3 Arreglos multidimensionales</strong>
+          <ul class="ms-4 list-unstyled">
+            <li>2.3.1 Representación</li>
+            <li>2.3.2 Formas de uso</li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <h4 class="text-center mb-4 mt-5">¿Cómo guardarías 6 nombres bajo un solo cajón?</h4>
+    <div class="row align-items-center mb-5">
+      <div class="col-12 col-lg-6 mb-4 mb-lg-0 text-justify">
+        <p>Figúrense que desean almacenar los nombres de sus 6 primos. Como se vio en la unidad temática I en el tema
+          de las variables, tendrían que crear 6 variables de tipo <code>char</code> separadas e independientes
+          (primo 1, primo 2, primo 3, etc.), pero se pretende almacenar todos los primos bajo un solo nombre:
+          <strong>Primos</strong>. Es similar a una cajonera, donde todos los cajones están juntos en un solo
+          mueble.
+        </p>
+        <p>A continuación, se rotulan los números de los cajones de izquierda a derecha. En la programación, siempre
+          empezamos a contar desde el 0. Los cajones se numeran: 0, 1, 2, 3, 4, 5.</p>
+        <p><em>Si la cajonera tiene capacidad para almacenar 6 primos, ¿en qué número de la cajonera se encuentra
+            guardado el último primo?</em></p>
+      </div>
+      <div class="col-12 col-lg-6 text-center">
+        <div class="cajon">
+          <div class="cajon-caja">Primo A</div>
+          <div class="cajon-idx">0</div>
+        </div>
+        <div class="cajon">
+          <div class="cajon-caja">Primo B</div>
+          <div class="cajon-idx">1</div>
+        </div>
+        <div class="cajon">
+          <div class="cajon-caja">Primo C</div>
+          <div class="cajon-idx">2</div>
+        </div>
+        <div class="cajon">
+          <div class="cajon-caja">Primo D</div>
+          <div class="cajon-idx">3</div>
+        </div>
+        <div class="cajon">
+          <div class="cajon-caja">Primo E</div>
+          <div class="cajon-idx">4</div>
+        </div>
+        <div class="cajon">
+          <div class="cajon-caja">Primo F</div>
+          <div class="cajon-idx">5</div>
+        </div>
+        <p class="text-muted mt-2 mb-0" style="font-size:0.85rem;">Arreglo <code>Primos[6]</code> — cada casilla se
+          identifica por su índice</p>
+      </div>
+    </div>
+
+    <div class="row align-items-center mb-5">
+      <div class="col-12 text-justify">
+        <p>Un <strong>arreglo unidimensional</strong> es un tipo de estructura de datos que consta de un número fijo
+          de elementos de un mismo tipo. También se considera como una colección finita, es decir, se debe de
+          determinar cuál será el número máximo de elementos que formarán parte del arreglo unidimensional (tamaño
+          del arreglo), donde todos los elementos son del mismo tipo.</p>
+        <p>Los arreglos unidimensionales se consideran estructuras de datos <strong>estáticas</strong>, ya que al
+          momento de declarar se les asigna un tamaño, el cual no puede ser modificado durante la ejecución del
+          programa.</p>
+        <p>Nos preguntamos, ¿cómo se declara un arreglo unidimensional? Utilizando cualquier lenguaje de
+          programación, un vector se declara de la siguiente forma:</p>
+      </div>
+    </div>
+
+    <div class="bg-dark rounded p-3 mb-2 shadow-sm mx-auto" style="max-width: 600px;">
+      <pre class="mb-0"><code class="language-cpp">int Arreglo_Unidimensional[10];</code></pre>
+    </div>
+    <p class="text-center text-muted mb-5" style="font-size:0.9rem;"><em>(Tipo de Dato + Nombre_Arreglo +
+        Tamaño)</em></p>
+
+    <div class="pleca-temas mb-4 rounded shadow-sm">2.1 Arreglos unidimensionales</div>
+
+    <h5 class="mt-4 mb-3 text-primary">2.1.1 Representación</h5>
+    <p>La manera de representar un arreglo unidimensional en la memoria es a través de un vector donde se definen los
+      espacios de memoria a ocupar. Por ejemplo, en un lenguaje de programación, los arreglos inician desde cero, que
+      es representado por un subíndice <code>(i)</code> para identificar la primera posición de memoria del arreglo.
+      Si el tamaño es, por ejemplo, <code>int Arreglo_Unidimensional[10]</code>, eso quiere decir que requerimos de
+      10 espacios de memoria y el subíndice <code>(i)</code> del último elemento es 9 (10 − 1) porque se inicia desde
+      el subíndice i = 0.</p>
+
+    <div class="text-center my-4">
+      <div class="celda-arreglo">
+        <div class="celda-valor">?</div>
+        <div class="celda-idx">0</div>
+      </div>
+      <div class="celda-arreglo">
+        <div class="celda-valor">?</div>
+        <div class="celda-idx">1</div>
+      </div>
+      <div class="celda-arreglo">
+        <div class="celda-valor">?</div>
+        <div class="celda-idx">2</div>
+      </div>
+      <div class="celda-arreglo">
+        <div class="celda-valor">?</div>
+        <div class="celda-idx">3</div>
+      </div>
+      <div class="celda-arreglo">
+        <div class="celda-valor">?</div>
+        <div class="celda-idx">4</div>
+      </div>
+      <div class="celda-arreglo">
+        <div class="celda-valor">?</div>
+        <div class="celda-idx">5</div>
+      </div>
+      <div class="celda-arreglo">
+        <div class="celda-valor">?</div>
+        <div class="celda-idx">6</div>
+      </div>
+      <div class="celda-arreglo">
+        <div class="celda-valor">?</div>
+        <div class="celda-idx">7</div>
+      </div>
+      <div class="celda-arreglo">
+        <div class="celda-valor">?</div>
+        <div class="celda-idx">8</div>
+      </div>
+      <div class="celda-arreglo">
+        <div class="celda-valor">?</div>
+        <div class="celda-idx">9</div>
+      </div>
+      <p class="text-muted mt-1 mb-0" style="font-size:0.85rem;">int Arreglo_Unidimensional[10] — subíndice i = 0
+        … 9</p>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span class="material-symbols-outlined align-middle me-2">edit_note</span>Ejercicio
+        Reflexivo</h4>
+      <hr>
+      <p>Realiza el siguiente ejercicio:</p>
+      <ol class="mb-0">
+        <li>Declara un vector de tipo <code>char</code> de tamaño 12, represéntalo como quedaría en memoria
+          utilizando un subíndice (i).</li>
+        <li>Declara un arreglo unidimensional de tipo entero de tamaño 10, represéntalo como quedaría en memoria
+          utilizando un subíndice (i).</li>
+        <li>Declara un array de tipo flotante de tamaño 8, represéntalo como quedaría en memoria utilizando un
+          subíndice (i).</li>
+        <li>Declara un arreglo unidimensional de tipo string de tamaño 15, represéntalo como quedaría en memoria
+          utilizando un subíndice (i).</li>
+      </ol>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">2.1.2 Formas de uso</h5>
+    <p>Existen varias maneras de usar los vectores: una es almacenar una colección de datos secuenciales como, por
+      ejemplo, los nombres de jugadores; otra forma es hacer una búsqueda, esto se realiza recorriendo a cada uno de
+      los elementos hasta encontrar el elemento buscado. También se pueden ordenar los elementos del arreglo, ya sea
+      de menor a mayor o viceversa.</p>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span
+          class="material-symbols-outlined align-middle me-2">code_blocks</span>ACTIVIDAD UTII_A1:
+        Nombre_Jugadores</h4>
+      <hr>
+      <p><strong>Propósito:</strong> Utilizar un lenguaje de programación para declarar un arreglo unidimensional
+        definiéndolo con el tipo de dato string (cadena de caracteres) y en el que se puedan ingresar 6 nombres de
+        jugadores. La intención de esta actividad es que el estudiante comprenda las operaciones que se realizan
+        sobre un arreglo unidimensional, para este caso es el de asignar valores al arreglo; así como recorrerlo
+        para acceder y mostrar cada uno de sus elementos; por último, realizar una búsqueda.</p>
+
+      <p class="mt-3 fw-bold">Instrucciones:</p>
+      <ol>
+        <li>Declara el arreglo unidimensional de tipo string que se llame <code>Jugador</code> de tamaño
+          <code>[6]</code>, también declara una variable de tipo string que se llame <code>Buscar_Jugador</code>.
+        </li>
+        <li>La forma de asignar los nombres de los jugadores al arreglo unidimensional será solicitándole el nombre
+          del jugador al usuario. Se tendrá que utilizar una estructura de control como es el <code>for</code>.</li>
+        <li>Al recibir el nombre tendrá que almacenarse en la posición de memoria que está representada por el
+          subíndice (i) del arreglo.</li>
+        <li>Después de haber almacenado los nombres, a través del <code>for</code>, se recorrerá para mostrar el
+          mensaje: <em>"En la posición [TAL] del arreglo, se encuentra el jugador [TAL]"</em>.</li>
+        <li>Posteriormente, volver a recorrer el arreglo para realizar la búsqueda. Se le pedirá al usuario el
+          nombre del jugador a buscar (<code>Buscar_Jugador</code>), se recorrerá cada elemento comparándolo, y si
+          hay coincidencia se enviará el mensaje <em>"El nombre del jugador se encuentra en la posición [TAL]"</em>,
+          de lo contrario <em>"El nombre del jugador no se encuentra"</em>.</li>
+      </ol>
+
+      <p class="mt-3 fw-bold">Evidencia a entregar:</p>
+      <ul class="mb-0">
+        <li>Programa fuente (ej. <code>RBV_Programa_Jugador.cpp</code>).</li>
+        <li>Programa ejecutable (<code>.exe</code>).</li>
+        <li>Corrida del programa en PDF.</li>
+        <li>Subir la evidencia a Google Classroom en la fecha y hora indicada.</li>
+      </ul>
+      <p class="mt-3 mb-0 text-end fw-bold text-success">Valor de la actividad: 10 puntos.</p>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">2.1.3 Implementación</h5>
+    <p>Para poder hacer uso de un arreglo es necesario reservar un espacio de memoria. Para acceder a la lista de
+      elementos del arreglo, es necesario utilizar una estructura de control conocida como <code>for</code>.</p>
+    <p>¿En qué consiste el <code>for</code>? En repetir un bloque de código varias veces de forma automática mientras
+      se cumpla una condición. Se conforma de tres partes:</p>
+
+    <div class="bg-dark rounded p-3 mb-4 shadow-sm mx-auto" style="max-width: 600px;">
+      <pre class="mb-0"><code class="language-cpp">for (inicialización; condición; incremento)</code></pre>
+    </div>
+
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong class="text-primary">Inicialización:</strong> variable contador donde
+            se va a empezar (ej. i=0).</li>
+          <li class="list-group-item"><strong class="text-primary">Condición:</strong> el ciclo se repite mientras se
+            cumpla (ej. i&lt;10).</li>
+          <li class="list-group-item"><strong class="text-primary">Incremento:</strong> cuánto aumenta en cada ciclo
+            (ej. i++).</li>
+        </ul>
+      </div>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">2.1.4 Operaciones permitidas</h5>
+    <div class="row mb-4">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong><span class="text-info">→</span> a) Recorrido:</strong> Se recorre
+            para consultar los elementos del arreglo.</li>
+          <li class="list-group-item">
+            <strong><span class="text-primary">+</span> b) Asignación:</strong> Existen tres formas para asignar
+            valores:
+            <ol class="mt-2 mb-0">
+              <li>Al momento de declarar: <code>int Arreglo[10] = {2,4,6,8,10,12,14,16,18,20};</code></li>
+              <li>Pidiendo valores al usuario mediante un ciclo <code>for</code> y <code>cin &gt;&gt;
+                  Arreglo[i]</code>.</li>
+              <li>Asignación automática mediante acumuladores dentro de un <code>for</code>.</li>
+            </ol>
+          </li>
+          <li class="list-group-item"><strong><span class="text-success">⌕</span> c) Búsqueda:</strong> Recorrer el
+            arreglo para encontrar un elemento.</li>
+          <li class="list-group-item"><strong><span class="text-warning">↻</span> d) Ordenamiento:</strong> Ordenar
+            del menor al mayor, mayor al menor, A-Z o Z-A.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span
+          class="material-symbols-outlined align-middle me-2">code_blocks</span>ACTIVIDAD UTII_A2:
+        Asignación_Automática</h4>
+      <hr>
+      <p><strong>Propósito:</strong> Declarar un arreglo entero <code>Numeros_Pares[10]</code> e ingresar 10 números
+        pares automáticamente utilizando una variable <code>Acumulador</code> que avance de dos en dos, para luego
+        mostrarlos junto con la suma total de los elementos.</p>
+      <p class="mt-3 mb-0 text-end fw-bold text-success">Valor de la actividad: 10 puntos.</p>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span class="material-symbols-outlined align-middle me-2">edit_note</span>Ejercicio
+        Reflexivo</h4>
+      <hr>
+      <p>Se tiene el siguiente arreglo de los días de la semana:</p>
+      <div class="bg-dark rounded p-3 mb-3 shadow-sm">
+        <pre
+          class="mb-0"><code class="language-cpp">String Dias_semana[7] = {"Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"};</code></pre>
+      </div>
+      <ol>
+        <li>¿Qué valor devuelve la instrucción: <code>Dias_semana[3]</code>?</li>
+        <li>¿Qué valor devuelve la instrucción: <code>Dias_semana[0]</code>?</li>
+        <li>Si ejecutamos la orden: <code>Dias_semana[5] = NULL</code> ¿cómo queda la lista completa de datos ahora?
+        </li>
+        <li><strong>ERROR COMÚN:</strong> ¿qué pasa si intentas pedir <code>Dias_semana[7]</code>?</li>
+      </ol>
+      <details class="mt-3">
+        <summary class="fw-bold" style="cursor:pointer; color:#025373;">Ver validación de respuestas</summary>
+        <ol class="mt-2 mb-0">
+          <li>Jueves.</li>
+          <li>Lunes.</li>
+          <li>[Lunes, Martes, Miercoles, Jueves, Viernes, NULL, Domingo].</li>
+          <li>Fuera de límite. El índice máximo es 6, pedir la posición 7 provoca que el programa falle por leer
+            memoria que no le pertenece.</li>
+        </ol>
+      </details>
+      <hr>
+      <p class="mb-0"><strong>Evaluación formativa rápida:</strong> Si tengo un array con los meses del año (12
+        elementos), ¿cuál es el subíndice de Enero y cuál es el de Diciembre?</p>
+      <p class="mt-3 mb-0 fst-italic text-muted">Conclusión: los arreglos permiten guardar datos homogéneos y acceder
+        instantáneamente a ellos usando su subíndice.</p>
+    </div>
+
+    <div class="pleca-temas mb-4 rounded shadow-sm mt-5">2.2 Arreglos bidimensionales (Matrices/Tablas)</div>
+
+    <div class="row align-items-center mb-5 mt-4">
+      <div class="col-12 text-justify">
+        <p>Imagínense que se necesita llevar el control de la asignación de asientos de un avión. Con un arreglo
+          unidimensional no es suficiente, porque los asientos constan de varias filas y columnas. Se requiere de un
+          arreglo bidimensional (dos dimensiones), comúnmente conocido como <strong>matriz</strong>.</p>
+        <p><strong>¿Qué es un arreglo bidimensional?</strong> Es un vector de vectores. Es un conjunto de elementos
+          del mismo tipo que necesitan dos subíndices <code>[i][j]</code> para definir cualquier elemento. El primer
+          índice representa las filas y el segundo las columnas.</p>
+        <p>La principal diferencia con los unidimensionales es que estos se asemejan a tablas de bases de datos.
+          Además, para recorrerlos, se requieren <strong>dos ciclos <code>for</code> anidados</strong>.</p>
+        <p><strong>¿Cómo declarar un arreglo bidimensional?</strong></p>
+      </div>
+    </div>
+
+    <div class="bg-dark rounded p-3 mb-2 shadow-sm mx-auto" style="max-width: 600px;">
+      <pre class="mb-0"><code class="language-cpp">int Arreglo_Bidimensional[4][3];</code></pre>
+    </div>
+    <p class="text-center text-muted mb-5" style="font-size:0.9rem;"><em>(Tipo de Dato + Nombre_Arreglo + [Tamaño
+        Fila] + [Tamaño Columna])</em></p>
+
+    <h5 class="mt-4 mb-3 text-primary">2.2.1 Representación y Formas de uso</h5>
+    <p>Si se declara <code>char Matriz[3][4]</code>, este arreglo tendría 12 (3x4) espacios de memoria para guardar
+      elementos.</p>
+
+    <div class="text-center my-4">
+      <table class="matriz-diagrama mx-auto">
+        <tr>
+          <td class="encabezado"></td>
+          <td class="encabezado">j=0</td>
+          <td class="encabezado">j=1</td>
+          <td class="encabezado">j=2</td>
+          <td class="encabezado">j=3</td>
+        </tr>
+        <tr>
+          <td class="encabezado">i=0</td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td class="encabezado">i=1</td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+        </tr>
+        <tr>
+          <td class="encabezado">i=2</td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+          <td>?</td>
+        </tr>
+      </table>
+      <p class="text-muted mt-2 mb-0" style="font-size:0.85rem;">char Matriz[3][4] — 12 espacios de memoria</p>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span class="material-symbols-outlined align-middle me-2">edit_note</span>Ejercicio
+        Reflexivo</h4>
+      <hr>
+      <p>Realiza el siguiente ejercicio:</p>
+      <ol class="mb-0">
+        <li>Declara un arreglo bidimensional de tipo <code>char</code> de tamaño (5x4) y represéntalo en memoria con
+          subíndices <code>[i][j]</code>.</li>
+        <li>Declara un arreglo de tipo <code>int</code> (3x6) y represéntalo.</li>
+        <li>Declara un arreglo de tipo <code>float</code> (2x4) y represéntalo.</li>
+      </ol>
+    </div>
+
+    <p>Existen varios tipos de matrices especiales, por ejemplo, la <strong>matriz identidad</strong>. Es una matriz
+      cuadrada donde todos sus elementos son ceros (0) menos los de la diagonal principal que son unos (1).</p>
+
+    <div class="text-center my-4">
+      <table class="matriz-diagrama matriz-identidad mx-auto">
+        <tr>
+          <td class="uno">1</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td class="uno">1</td>
+          <td>0</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+          <td class="uno">1</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td class="uno">1</td>
+        </tr>
+      </table>
+      <p class="text-muted mt-2 mb-0" style="font-size:0.85rem;">Matriz identidad (4x4)</p>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span
+          class="material-symbols-outlined align-middle me-2">code_blocks</span>ACTIVIDAD UTII_A3:
+        Matriz_Identidad</h4>
+      <hr>
+      <p><strong>Propósito:</strong> Declarar una matriz <code>Matriz_Identidad</code> entera de (4x4) y llenarla
+        automáticamente con ceros y unos (en su diagonal) utilizando ciclos <code>for</code> y una condición. Luego
+        recorrerla para imprimir sus valores.</p>
+      <p class="mt-3 mb-0 text-end fw-bold text-success">Valor de la actividad: 10 puntos.</p>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">2.2.3 Implementación</h5>
+    <p>La <strong>matriz traspuesta</strong> es un claro ejemplo de implementación. Se obtiene al intercambiar de
+      manera ordenada las filas de una matriz por sus columnas. Por ejemplo, si tenemos una Matriz A de (2x3), su
+      traspuesta At será de (3x2). Las filas de A pasan a ser las columnas de At.</p>
+
+    <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-5 my-4">
+      <div class="text-center">
+        <table class="matriz-diagrama mx-auto">
+          <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+          </tr>
+        </table>
+        <p class="text-muted mt-2 mb-0" style="font-size:0.85rem;">Matriz A (2x3)</p>
+      </div>
+      <span class="material-symbols-outlined text-primary" style="font-size:2rem;">arrow_forward</span>
+      <div class="text-center">
+        <table class="matriz-diagrama mx-auto">
+          <tr>
+            <td>1</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>6</td>
+          </tr>
+        </table>
+        <p class="text-muted mt-2 mb-0" style="font-size:0.85rem;">Matriz At (3x2)</p>
+      </div>
+    </div>
+
+    <h5 class="mt-5 mb-3 text-primary">2.2.4 Operaciones permitidas</h5>
+    <div class="row mb-5">
+      <div class="col-lg-8 mx-auto">
+        <ul class="list-group shadow-sm">
+          <li class="list-group-item"><strong><span class="text-info">→</span> Recorrido:</strong> Acceder a todos
+            los elementos.</li>
+          <li class="list-group-item"><strong><span class="text-primary">+</span> Asignación:</strong> Se puede
+            hacer al declarar (<code>int Matriz[2][3] = {1,2,3,4,5,6};</code>), pidiendo al usuario o de forma
+            automática (con doble <code>for</code>).</li>
+          <li class="list-group-item"><strong><span class="text-success">⌕</span> Búsqueda:</strong> Encontrar un
+            elemento específico usando sus coordenadas.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span
+          class="material-symbols-outlined align-middle me-2">code_blocks</span>ACTIVIDAD UTII_A4:
+        Matriz_Traspuesta</h4>
+      <hr>
+      <p><strong>Propósito:</strong> Declarar una Matriz A (2x3) y llenarla con {1,2,3,4,5,6}. Luego, transponerla en
+        una matriz At (3x2) y mostrar ambas en pantalla.</p>
+      <p class="mt-3 mb-0 text-end fw-bold text-success">Valor de la actividad: 10 puntos.</p>
+    </div>
+
+    <div class="actividad p-4 rounded shadow-sm mx-auto mb-5">
+      <h4 class="mb-3 text-primary"><span class="material-symbols-outlined align-middle me-2">edit_note</span>Ejercicio
+        Reflexivo</h4>
+      <hr>
+      <p>Se tiene el siguiente arreglo bidimensional (matriz) de 3x4:</p>
+      <div class="text-center my-3">
+        <table class="matriz-diagrama matriz-emoji mx-auto">
+          <tr>
+            <td>🐺</td>
+            <td>🐱</td>
+            <td>🐮</td>
+            <td>🐭</td>
+          </tr>
+          <tr>
+            <td>🐿️</td>
+            <td>😵</td>
+            <td>🦨</td>
+            <td>🐦</td>
+          </tr>
+          <tr>
+            <td>🐝</td>
+            <td>🐞</td>
+            <td>🐜</td>
+            <td>🐛</td>
+          </tr>
+        </table>
+      </div>
+      <p class="fw-bold">Resuelve:</p>
+      <ol>
+        <li>¿Qué coordenada <code>matriz[fila][columna]</code> contiene la hormiga (🐜)?</li>
+        <li>¿Qué emoji se encuentra en la coordenada <code>matriz[2][3]</code>?</li>
+        <li>¿Qué ocurre si el código intenta ejecutar <code>matriz[1][1] = '🦋'</code>? Explica.</li>
+        <li>¿Qué ocurre si el código intenta ejecutar <code>matriz[0][2] = NULL</code>? Explica.</li>
+        <li>¿Cuáles son las dimensiones totales de esta matriz?</li>
+      </ol>
+      <hr>
+      <p class="fw-bold mb-2">Cierre: Consolidación y conclusión</p>
+      <ul class="mb-0">
+        <li>Si para recorrer un array de una fila se usa un <code>for</code>, ¿cuántos se necesitan para toda la
+          matriz? <em>(Respuesta: 2).</em></li>
+        <li>¿Cuál es la coordenada para cambiar el último emoji de la esquina inferior izquierda por una flor
+          ('🌻')? <em>(Respuesta: matriz[2][0] = '🌻').</em></li>
+      </ul>
+      <p class="mt-3 mb-0 fst-italic text-muted">Conclusión: los arreglos bidimensionales son eficientes porque se
+        almacenan en bloques de memoria contigua.</p>
+    </div>
+
+    <div class="pleca-temas mb-4 rounded shadow-sm mt-5">2.3 Arreglos multidimensionales (Data warehouse)</div>
+
+    <div class="row align-items-center mb-5 mt-4">
+      <div class="col-12 col-lg-8 mx-auto text-justify">
+        <p><strong>¿Qué son los arreglos multidimensionales?</strong></p>
+        <p>Son arreglos de más de dos dimensiones. A diferencia de los arreglos uni y bidimensionales, estos son una
+          colección finita, homogénea y ordenada de elementos de n dimensiones. Permiten trabajar con grandes
+          volúmenes de información (como en Data Warehouses, Minería de datos, cubos OLAP) de manera organizada y
+          eficiente. Para hacer referencia a cada componente, se usarán n subíndices, uno para cada dimensión.</p>
+      </div>
+    </div>
 
     <div class="d-flex justify-content-between align-items-center mt-5 mb-5 pt-4 border-top">
       <a href="unidad1.html" class="btn btn-outline-primary d-flex align-items-center gap-2">
@@ -161,13 +815,13 @@
   </main>
 
   <div class="footer-buttons shadow-lg">
-    <a href="pdf/practica_1_u1.pdf" target="_blank">
+    <a href="pdf/practica_2_u2.pdf" target="_blank">
       <button>
         <span class="material-symbols-outlined">docs</span>
         <span class="button-text text-start">Práctica Unidad 2</span>
       </button>
     </a>
-    <a href="pdf/ejemplo_de_solucion_p1u1.pdf" target="_blank">
+    <a href="pdf/ejemplo_de_solucion_p2u2.pdf" target="_blank">
       <button>
         <span class="material-symbols-outlined">fact_check</span>
         <span class="button-text text-start">Ejemplo de solución</span>
